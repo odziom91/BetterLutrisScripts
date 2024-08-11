@@ -10,7 +10,7 @@ script:
   files:
   - setup: N/A:Please select the GOG.com Windows installer.
   - ray2fix: https://github.com/spitfirex86/Ray2Fix/releases/download/v1.3.0/Ray2Fix_1.3.0_Hotfix1.zip
-  - rayman_pl: https://github.com/odziom91/BetterLutrisScripts/raw/main/Rayman_2_The_Great_Escape/files/Rayman_2_PL.zip
+  - rayman_pl: https://github.com/odziom91/BetterLutrisScripts/raw/main/Rayman_2_The_Great_Escape/files/Rayman2PL.zip
   game:
     arch: win64
     exe: drive_c/GOG Games/Rayman 2/Launch Rayman 2 - The Great Escape.lnk
