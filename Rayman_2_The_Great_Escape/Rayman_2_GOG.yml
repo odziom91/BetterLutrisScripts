@@ -1,0 +1,40 @@
+description: Rayman 2 - The Great Escape - wersja GOG
+game_slug: rayman-2-the-great-escape
+gogslug: rayman_2_the_great_escape
+humblestoreid: ''
+installer_slug: rayman-2-the-great-escape-gog
+name: 'Rayman 2: The Great Escape'
+notes: "ENG: This installer includes: Rayman 2 [GOG version] and Ray2Fix.\nPL: Ten instalator zawiera: Rayman 2 [wersja GOG] oraz Ray2Fix."
+runner: wine
+script:
+  files:
+  - setup: N/A:Please select the GOG.com Windows installer.
+  - ray2fix: https://github.com/spitfirex86/Ray2Fix/releases/download/v1.3.0/Ray2Fix_1.3.0_Hotfix1.zip
+  game:
+    arch: win64
+    exe: drive_c/GOG Games/Rayman 2/Launch Rayman 2 - The Great Escape.lnk
+    launch_configs:
+    - exe: drive_c/GOG Games/Rayman 2/R2FixCfg.exe
+      name: Configuration
+    gogid: 1207658940
+    prefix: $GAMEDIR
+  installer:
+  - task:
+      arch: win64
+      install_gecko: false
+      install_mono: false
+      name: create_prefix
+      prefix: $GAMEDIR
+  - task:
+      executable: setup
+      name: wineexec
+      prefix: $GAMEDIR
+  - execute:
+      command: cd "$GAMEDIR/drive_c/GOG Games/Rayman 2"; rm -f -r 3DfxSpl* glide* ubi.ini ;
+  - extract:
+      dst: $GAMEDIR/drive_c/GOG Games/Rayman 2
+      src: ray2fix
+slug: rayman-2-the-great-escape-gog
+steamid: null
+version: GOG
+year: 1999
