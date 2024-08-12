@@ -1,4 +1,4 @@
-description: Rayman 2 - The Great Escape - wersja GOG
+description: Rayman 2 - The Great Escape - GOG
 game_slug: rayman-2-the-great-escape
 gogslug: rayman_2_the_great_escape
 humblestoreid: ''
@@ -14,7 +14,7 @@ script:
     arch: win64
     exe: drive_c/GOG Games/Rayman 2/Launch Rayman 2 - The Great Escape.lnk
     launch_configs:
-    - exe: drive_c/GOG Games/Rayman 2/R2FixCfg.exe
+    - exe: $GAMEDIR/drive_c/GOG Games/Rayman 2/R2FixCfg.exe
       name: Configuration
     gogid: 1207658940
     prefix: $GAMEDIR
@@ -37,4 +37,8 @@ script:
 slug: rayman-2-the-great-escape-gog
 steamid: null
 version: GOG
+wine:
+  overrides:
+    dinput.dll: n,b
+    dinput8.dll: n,b
 year: 1999
